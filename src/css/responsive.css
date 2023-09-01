@@ -352,6 +352,7 @@
     .jobs article {
         flex-direction: column;
         gap: 1.25rem;
+        text-align: center;
     }
 
     .join-mission .image {
