@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca|Space+Mono:400,700&display=swap");
+
+body {
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+.link-mobile {
+    display: none;
+}
+
+.header {
+    grid-area: header;
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu,
+.footer-menu {
+    display: flex;
+    gap: 3.125rem;
+    align-items: center;
+}
+
+.header-menu ul,
+.footer-menu ul {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.header-menu label,
+.footer-menu label {
+    font-family: 'Space Mono', sans-serif;
+    color: var(--color-dim-grey);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.header-menu label:hover,
+.footer-menu label:hover {
+    color: var(--color-yellow);
+    cursor: pointer;
+}
+
+.header > a,
+.link-mobile,
+.intro-description a,
+.telemetry a,
+.coming-section a,
+.payment-home a,
+.location-description a,
+.join-mission a,
+.jobs a {
+    padding: 0.625rem 1.875rem;
+    font-family: 'Space Mono', sans-serif;
+    color: var(--color-white);
+    background: var(--color-yellow);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.header > a:hover,
+.intro-description a:hover,
+.telemetry a:hover,
+.coming-section a:hover,
+.payment-home a:hover,
+.location-description a:hover {
+    background: var(--color-light-navy);
+}
+
+.cta {
+    padding: 5%;
+    display: flex;
+    background: var(--color-light-navy) url(../images/patterns/cta-circles.svg) center -100% no-repeat; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta h1 {
+    color: var(--color-white);
+    font-family: 'Space Mono', sans-serif;
+    font-size: 2.5rem;
+}
+
+.cta div {
+    display: flex;
+    gap: 1.875rem;
+}
+
+input {
+    display: none;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main-intro {
+    background: url(../images/images/home-hero-desktop.jpg) no-repeat;
+    background-size: cover;
+    padding: 10% 5%;
+    overflow: hidden;
+}
+
+.main-intro > div {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.main-intro h1 {
+    font-size: 3.5rem;
+    font-family: 'Space Mono', sans-serif;
+    color: var(--color-white);
+    margin-bottom: 4.375rem;
+}
+
+.main-intro .line {
+    position: absolute;
+    left: -10%;
+}
+
+.intro-description {
+    padding: 0 60% 0 10%;
+}
+
+.intro-description p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--color-white);
+    margin-bottom: 3.125rem;
+}
+
+.main-intro .images {
+    position: absolute;
+    right: -10%;
+    display: flex;
+    gap: 1.875rem;
+    align-items: flex-end;
+}
+
+.features {
+    padding: 10% 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4.375rem;
+    background: url(../images/patterns/horizontal-line.svg) 15% 35% no-repeat;
+    background-size: 70%;
+}
+
+.features h2 {
+    font-family: 'Space Mono', sans-serif;
+    color: var(--color-light-navy);
+    margin-bottom: 1.25rem;
+}
+
+.features p {
+    color: var(--color-dim-grey);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.features img {
+    margin-bottom: 2.5rem;
+}
+
+.telemetry,
+.coming-section,
+.payment-home,
+.mobility,
+.better,
+.join-mission {
+    padding: 5%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    gap: 18.75rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+.telemetry .arrow,
+.join-mission .arrow {
+    position: absolute;
+    right: -10%;
+    top: 40%;
+}
+
+.telemetry h1,
+.coming-section h1,
+.payment-home h1,
+.mobility h1,
+.better h1,
+.join-mission h1 {
+    color: var(--color-light-navy);
+    font-family: 'Space Mono', sans-serif;
+    font-size: 2.8125rem;
+    margin-bottom: 1.25rem;
+}
+
+.telemetry p,
+.coming-section p,
+.payment-home p,
+.mobility p,
+.better p,
+.join-mission p {
+    color: var(--color-dim-grey);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 3.125rem;
+}
+
+.image {
+    border-radius: 50%;
+}
+
+.coming-section,
+.better {
+    flex-direction: row-reverse;
+}
+
+.coming-section .arrow {
+    position: absolute;
+    left: -10%;
+}
+
+.payment-home .arrow {
+    position: absolute;
+    top: 20%;
+    right: -20%;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    background: var(--color-dark-navy);
+}
+
+.social-medias {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.social-medias a {
+    color: var(--color-yellow);
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-medias a:hover {
+    color: var(--color-light-yellow);
+}
+
+.about-intro,
+.location-intro,
+.careers-intro {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+}
+
+.about-intro {
+    background: url(../images/images/about-hero-desktop.jpg) no-repeat;
+}
+
+.location-intro {
+    background: url(../images/images/careers-locations-hero-desktop.jpg) no-repeat;
+}
+
+.careers-intro {
+    background: url(../images/images/careers-locations-hero-desktop.jpg);
+}
+
+.about-intro h1,
+.location-intro h1,
+.careers-intro h1 {
+    font-size: 2.5rem;
+    font-family: 'Space Mono', monospace;
+    color: var(--color-white);
+}
+
+.mobility .arrow {
+    position: absolute;
+    right: -20%;
+    bottom: 10%;
+}
+
+.better .arrow {
+    position: absolute;
+    left: 0;
+}
+
+.value-section {
+    padding: 5%;
+}
+
+.value-section h1,
+.faq h1,
+.values h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: var(--color-light-navy);
+    text-align: center;
+    margin-bottom: 3.125rem;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 6.25rem;
+    text-align: center;
+}
+
+.values img {
+    border-radius: 50%;
+    margin-bottom: 4.375rem;
+}
+
+.values article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.values h4 {
+    font-family: 'Space Mono', monospace;
+    padding: 1.875rem;
+    border-radius: 50%;
+    color: var(--color-light-navy);
+    font-size: 1.2rem;
+    background: var(--color-yellow);
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 30%;
+}
+
+.values h2 {
+    font-family: 'Space Mono', monospace;
+    color: var(--color-light-navy);
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+
+.values p,
+.location-description p {
+    color: var(--color-dim-grey);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.faq {
+    padding: 5%;
+}
+
+.faq > section {
+    display: flex;
+    gap: 6.25rem;
+}
+
+.faq article {
+    position: relative;
+}
+
+.how-it-works {
+    margin-bottom: 1.875rem;
+}
+
+.faq h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.875rem;
+    color: var(--color-light-navy);
+    width: 28.125rem;
+}
+
+.main-page,
+.about-page,
+.location-page,
+.careers-page {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    top: -100%;
+    transition: 0.3s;
+}
+
+.selecionado {
+    position: relative;
+    display: block;
+    z-index: 1;
+    opacity: 1;
+    top: 0;
+}
+
+.acordeon {
+    margin: 0.625rem 0 0;
+    transition: 0.3s ease-in-out;
+    font: 700 1.2rem 'Space Mono', monospace;
+    text-align: left;
+    width: 100%;
+    color: var(--color-light-navy);
+    background: rgba(0,0,0,.03);
+    padding: 0.625rem 0.625rem 1.875rem 0.625rem;
+    transition: 0.3s;
+    border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.acordeon:hover {
+    background: rgba(187, 228, 7, 0.329);
+}
+
+.bg-active {
+    background: rgba(187, 228, 7, 0.329);
+}
+
+.acordeon::after {
+    content: url(../images/icons/arrow-down.svg);
+    position: absolute;
+    right: 0.625rem;
+}
+
+.active::after {
+    content: url(../images/icons/arrow-up.svg);
+}
+
+.acordeon:hover {
+    cursor: pointer;
+}
+
+.info hr {
+    height: 0;
+    border: 0.6px solid var(--color-light-yellow);
+}
+
+.info {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    background: rgba(187, 228, 7, 0.329);
+    border-radius: 0 0 0.625rem 0.625rem;
+}
+
+.info p {
+    margin: 1.25rem;
+    text-align: center;
+    word-break: break-word;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.img-map {
+    width: 100%;
+    object-fit: contain;
+    margin-top: 3.125rem;
+}
+
+.location-description {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 6.25rem;
+    align-items: center;
+    -webkit-box-direction: normal;
+}
+
+.location-description h1 {
+    font-family: 'Space Mono', monospace;
+    color: var(--color-light-navy);
+    font-size: 2.5rem;
+}
+
+.join-mission a:hover,
+.jobs a:hover {
+    background: var(--color-white);
+    color: var(--color-yellow);
+    border: 2px solid var(--color-yellow);
+}
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 5%;
+}
+
+.jobs article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    background: rgba(0,0,0,.03);
+    border-radius: 0.625rem;
+}
+
+.jobs h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    color: var(--color-light-navy);
+    margin-bottom: 0.625rem;
+}
+
+.jobs p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--color-dim-grey);
+}
+
+#menu__toggle {
+    display: none;
+}
